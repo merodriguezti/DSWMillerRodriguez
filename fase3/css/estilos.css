@@ -1,23 +1,23 @@
 *{
-margin: 0;
-padding: 0;
+margin: 10;
+border-radius: 5px;
 font-family: Arial, Helvetica, sans-serif;
 box-sizing: border-box;
 }
 
 header {
     padding: 20px; 
-    text-align: center;
-    background: #0E2C40;
-    color: white;
+    justify-content: space-between;
+    display: flex;
+    background: white;
+    color: black;
     box-shadow: 1px 1px 10px 0px black;
     
 }
 nav{
-    width: 100%;
-    height: 50px; 
-    background: #1a4a5a;
-    box-shadow: 1px 1px 10px 0px black;
+    display: flex;
+    background:rgb(243, 94, 9);
+    box-shadow: 1px 1px 10px 0px white;
 }
 
 .menu{
@@ -39,21 +39,24 @@ nav{
 }
 
 .menu li:hover{
-    background: rgba(0,0,0,0.3);
+  
+    background: rgba(238, 5, 5, 0.3);
     color: white;
     cursor: pointer;
     transition: all 300ms;
 }
 
 .menu ul li ul{
+   
    *display: none;
    flex-direction: column;
    position: absolute;
-   background: #148d8d;
+   background: #f18b0698;
    margin-top: 15px;
    transform: rotateY(240deg) scale(0);
    transition: all 1s;
    box-shadow: 1px 1px 10px 0px black;
+   
 }
 
 .menu ul li:hover > ul{
@@ -67,7 +70,7 @@ width: 0;
 height: 0;
 border-right: 10px solid transparent;
 border-left: 10px solid transparent;
-border-bottom: 8px solid #148d8d;
+border-bottom: 8px solid #f18b0698;;
 position: absolute;
 margin-top: -8px;
 margin-left: 20px;
@@ -75,17 +78,19 @@ margin-left: 20px;
 
 .contenedor{
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 77% 23%;
 }
 
 article{
+    
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 section{
-    background: #c1ea7c;
+    margin-top: 5px ;
+    margin-right: 5px;
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
@@ -94,8 +99,9 @@ section{
 }
 
 aside{
-
-    background: #efbc75;
+    margin-top: 5px;
+    text-align: center;
+    justify-content:space-evenly;
     box-shadow: 1px 1px 10px 0px black;
 }
 
@@ -106,4 +112,31 @@ h1{
 
 h2{
     text-align: center;
+}
+
+footer{
+    background-color: #f18b0698;
+    text-align: center;
+    box-shadow: 1px 1px 10px 0px black;
+    
+}
+
+.centrado{
+    justify-content: space-between;
+    display: flex;
+    box-shadow: 1px 1px 5px 0px black;
+    margin: 3px;
+    padding-top: 5px;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header{
+        flex-direction: column;/* coloca los elementos verticales. */
+        align-items: flex-start;
+        
+    }
 }
